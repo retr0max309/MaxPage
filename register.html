@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesregister.css">
+    <title>Register</title>
+</head>
+<body>
+
+    <form class="form">
+        <div class="title-container">
+            <img class="icon" src="assets/icons/icon-2.svg" alt="icon">
+            <p class="title">Register</p>
+            <div class="spinner-container">
+                <div class="spinner"></div>
+            </div>
+        </div>
+        
+        <p class="message">Signup now and get full access to our web page.</p>
+   
+        <div class="flex">
+            <label>
+                <input class="input" type="text" id="firstname" required>
+                <span>Firstname</span>
+            </label>
+            
+            <label>
+                <input class="input" type="text" id="lastname" required>
+                <span>Lastname</span>
+            </label>
+        </div>
+   
+        <label>
+            <input class="input" type="email" id="email" required>
+            <span>Email</span>
+        </label>
+   
+        <label>
+            <input class="input" type="password" id="password" required>
+            <span>Password</span>
+        </label>
+   
+        <label>
+            <input class="input" type="password" id="confirmPassword" required>
+            <span>Confirm password</span>
+        </label>
+   
+        <button type="button" class="submit" onclick="registerUser()">Submit</button>
+        
+        <p class="signin">
+            Already have an account? <a href="login.html">Signin</a>
+        </p>
+    </form>
+   
+
+    <script src="register.js"></script>
+
+</body>
+</html>

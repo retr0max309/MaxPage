@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras | DisMac Bolivia</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylescarrito.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">   
+                <i class="bi bi-bricks"></i>
+                Lego Shop
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown">
+                            Categorías
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Sets</a></li>
+                            <li><a class="dropdown-item" href="#">Piezas Roboticas</a></li>
+                            <li><a class="dropdown-item" href="#">Accesorios</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+                    <i class="fas fa-shopping-cart me-2"></i>
+                    Carrito
+                    <span id="cartCount" class="badge bg-danger ms-1">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section text-white text-center py-5 mb-5">
+        <video class="video-bg" autoplay loop muted playsinline>
+            <source src="fondovideo.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="container position-relative">
+            <h1 class="display-4 fw-bold mb-4">Mejores Sets 2024</h1>
+            <p class="lead mb-4">Descubre nuestra increíble selección de sets con los mejores precios</p>
+            
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="container py-5" id="galeria">
+        <div class="text-center mb-5">
+            <h2 class="display-5">Galería de Legos</h2>
+            <p class="text-muted">Mira lo mejor que tenemos para ofrecer</p>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card">
+                    <div style="border: 1px solid #ccc; border-radius: 5px; width: 539px; padding: 120px; text-align: center;">
+                        <img src="Images/auto1.jpg" alt="Descripción de la imagen" style="width: 100%; border-radius: 5px 5px 0 0;">
+                    </div>
+                                         
+                    <div class="card__content">
+                        <p class="card__title">Lamborghini</p>
+                        <p class="card__description">Descripción breve del producto.</p>
+                    </div>
+                    
+                </div>
+                <button class="btn" onclick="addToCart(1)">Agregar al Carrito</button>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card">
+                    <div style="border: 1px solid #ccc; border-radius: 5px; width: 539px; padding: 120px; text-align: center;">
+                        <img src="Images/auto2.jpg" alt="Descripción de la imagen" style="width: 100%; border-radius: 5px 5px 0 0;">
+                    </div>
+                      
+                    <div class="card__content">
+                        <p class="card__title">Porsche</p>
+                        <p class="card__description">Descripción breve del producto.</p>
+                    </div>
+                    
+                </div>
+                <button class="btn" onclick="addToCart(2)">Agregar al Carrito</button>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card">
+                    <div style="border: 1px solid #ccc; border-radius: 5px; width: 539px; padding: 120px; text-align: center;">
+                        <img src="Images/auto3.jpg" alt="Descripción de la imagen" style="width: 100%; border-radius: 5px 5px 0 0;">
+                    </div>
+                    <div class="card__content">
+                        <p class="card__title">Delorean</p>
+                        <p class="card__description">Descripción breve del producto.</p>
+                    </div>
+                    
+                </div>
+                <button class="btn" onclick="addToCart(3)">Agregar al Carrito</button>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card">
+                    <div style="border: 1px solid #ccc; border-radius: 5px; width: 539px; padding: 120px; text-align: center;">
+                        <img src="Images/auto4.jpg" alt="Descripción de la imagen" style="width: 100%; border-radius: 5px 5px 0 0;">
+                    </div>
+                    <div class="card__content">
+                        <p class="card__title">Batimovil</p>
+                        <p class="card__description">Descripción breve del producto.</p>
+                    </div>
+                   
+                </div>
+                <button class="btn" onclick="addToCart(4)">Agregar al Carrito</button>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col">
+                <div class="card">
+                    <div style="border: 1px solid #ccc; border-radius: 5px; width: 539px; padding: 150px; text-align: center;">
+                        <img src="Images/auto5.jpg" alt="Descripción de la imagen" style="width: 100%; border-radius: 5px 5px 0 0;">
+                    </div>
+                    <div class="card__content">
+                        <p class="card__title">Batimovil 1989</p>
+                        <p class="card__description">Descripción breve del producto.</p>
+                    </div>
+                    
+                </div>
+                <button class="btn" onclick="addToCart(5)">Agregar al Carrito</button>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col">
+                <div class="card">
+                    <div style="border: 1px solid #ccc; border-radius: 5px; width: 539px; padding: 140px; text-align: center;">
+                        <img src="Images/coliseo.jpg" alt="Descripción de la imagen" style="width: 100%; border-radius: 5px 5px 0 0;">
+                    </div>
+                    <div class="card__content">
+                        <p class="card__title">Coliseo Romano</p>
+                        <p class="card__description">Descripción breve del producto.</p>
+                    </div>
+                    
+                </div>
+                <button class="btn" onclick="addToCart(6)">Agregar al Carrito</button>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="col">
+                <div class="card">
+                    <div style="border: 1px solid #ccc; border-radius: 5px; width: 539px; padding: 120px; text-align: center;">
+                        <img src="Images/jack.jpg" alt="Descripción de la imagen" style="width: 100%; border-radius: 5px 5px 0 0;">
+                    </div>
+                    <div class="card__content">
+                        <p class="card__title">Jack Daniels</p>
+                        <p class="card__description">Descripción breve del producto.</p>
+                    </div>
+                    
+                </div>
+                <button class="btn" onclick="addToCart(7)">Agregar al Carrito</button>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="col">
+                <div class="card">
+                    <div style="border: 1px solid #ccc; border-radius: 5px; width: 539px; padding: 120px; text-align: center;">
+                        <img src="Images/titanic.jpg" alt="Descripción de la imagen" style="width: 100%; border-radius: 5px 5px 0 0;">
+                    </div>
+                    <div class="card__content">
+                        <p class="card__title">Titanic</p>
+                        <p class="card__description">Descripción breve del producto.</p>
+                    </div>
+                    
+                </div>
+                <button class="btn" onclick="addToCart(8)">Agregar al Carrito</button>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="col">
+                <div class="card">
+                    <div style="border: 1px solid #ccc; border-radius: 5px; width: 539px; padding: 120px; text-align: center;">
+                        <img src="Images/falcon.jpg" alt="Descripción de la imagen" style="width: 100%; border-radius: 5px 5px 0 0;">
+                    </div>
+                    <div class="card__content">
+                        <p class="card__title">Alcon Milenario</p>
+                        <p class="card__description">Descripción breve del producto.</p>
+                    </div>
+                    
+                </div>
+                <button class="btn" onclick="addToCart(9)">Agregar al Carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">
+                <i class="fas fa-shopping-cart me-2"></i>
+                Tu Carrito
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="cartItems" class="mb-3">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="border-top pt-3">
+                <div class="d-flex justify-content-between mb-2">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <span>IVA (16%):</span>
+                    <span id="tax">$0.00</span>
+                </div>
+                <div class="d-flex justify-content-between mb-3">
+                    <strong>Total:</strong>
+                    <strong id="total">$0.00</strong>
+                </div>
+                <button class="btn btn-primary w-100" onclick="checkout()">
+                    <i class="fas fa-credit-card me-2"></i>
+                    Proceder al Pago
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="scriptCarrito.js"></script>
+</body>
+</html>

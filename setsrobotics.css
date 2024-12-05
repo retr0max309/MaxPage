@@ -1,0 +1,126 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: yellow;
+    scroll-behavior: smooth;
+}
+
+
+.product-card {
+    transition: all 0.3s ease-in-out;
+    transform: perspective(1000px);
+}
+
+.product-card:hover {
+    transform: scale(1.02) rotateX(2deg) rotateY(-2deg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    background-color: #cef7ff;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+
+.feature-icon {
+    background: linear-gradient(45deg, #4fd1c5, #3182ce);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
+    color: transparent; 
+}
+
+
+
+/* Video Container */
+.video-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 70vh; /* Ocupa el 70% de la altura de la ventana */
+    max-height: 800px; /* Límite máximo de altura */
+    margin-top: 2rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que el video ocupe todo el ancho */
+    height: 100%; /* Asegura que el video ocupe toda la altura del contenedor */
+    border: none; /* Quita el borde */
+}
+
+/* Efecto Gloss para el contenedor del video */
+.video-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:none ;
+    z-index: 1;
+    pointer-events: none;
+}
+/* Estilos para el botón 'Go Back' con posición fija */
+.go-back-btn-container {
+    position: fixed;
+    bottom: 20px; /* Ubica el botón a 20px del fondo */
+    left: 50%; /* Centra el botón horizontalmente */
+    transform: translateX(-50%); /* Ajusta el botón para centrarlo exactamente */
+    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+.go-back-btn {
+    background-color: white;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.go-back-btn .icon {
+    position: absolute;
+    left: 15px;
+    transition: all 0.3s ease;
+}
+
+.go-back-btn:hover {
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.go-back-btn:hover .icon {
+    transform: translateX(10px);
+}
+
+.go-back-btn .text {
+    padding-left: 40px; /* Da espacio para el icono */
+}

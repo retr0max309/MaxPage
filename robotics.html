@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics Lego</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesrobotics.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+  <body>
+
+      <nav class="navbar navbar-expand-lg bg-yellow">
+          <div class="container">
+            <div class="d-flex align-items-center">           
+              <button 
+                id="btnRs" 
+                onclick="animateBars()" 
+                class="navbar-toggler me-4" 
+                type="button" 
+                data-bs-toggle="offcanvas" 
+                data-bs-target="#offcanvasExample" 
+                aria-controls="navbarSupportedContent" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation"
+              >
+                <span class="icon-bar-1"></span>
+                <span class="icon-bar-2"></span>
+                <span class="icon-bar-3"></span>
+                <small>MENU</small>
+              </button>
+        
+
+              <a class="navbar-brand me-5" href="index.html">
+                <img 
+                  src="./assets/brand-lego.svg" 
+                  alt="LEGO Logo" 
+                  style="width: 50px; height: 50px;"
+                >
+              </a>
+            </div>
+
+          
+              <button class="button" data-text="Awesome">
+                  <span class="actual-text">&nbsp;Robotics&nbsp;</span>
+                  <span aria-hidden="true" class="hover-text">&nbsp;Robotics&nbsp;</span>
+              </button>
+
+            <div class="d-flex align-items-center">
+              <a href="javascript:void(0)" class="me-3 d-flex align-items-center" onclick="openSidebar()">
+                  <img src="assets/icons/icon-4.svg" alt="" style="width: 18px; height: 18px;">
+                </a>
+                
+            </div>
+          </div>
+        </nav>
+        
+      <!-- HEADER -->
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header border-bottom-yellow">
+          <h6 class="offcanvas-title p-1rem" id="offcanvasExampleLabel">
+            <strong>MENU</strong>
+          </h6>
+          <button type="button" class="btn-close p-1rem" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" style="flex-grow: inherit !important;">
+          <button class="btn-1 mb-3 w-100 d-flex justify-content-center" 
+          style="font-size: .8rem !important;background-color: #abd9ff !important;padding: 0.7rem !important;">
+              <ion-icon class="me-2" name="arrow-back-outline"></ion-icon>
+              <strong>PLAY ZONE</strong>
+          </button>
+        </div>
+        <ul class="list-group" style="border-radius: 0px;">
+          <li class="list-group-item" style="border-top: 0px;color: #bc0e0e;">
+            EASTER
+          </li>
+          <li class="list-group-item">HOME</li>
+          <li class="list-group-item">SHOP</li>
+          <li class="list-group-item">DISCOVER</li>
+          <li class="list-group-item">HELP</li>
+          <li class="list-group-item">
+            <img src="assets/icons/icon-1.svg" style="width: 20px;" class="me-3">
+            Sign In
+          </li>
+          <li class="list-group-item">
+            <img src="assets/icons/icon-2.svg" style="width: 20px;" class="me-3">
+            Join LEGO® Insiders
+          </li>
+          <li class="list-group-item">My Wishlist</li>
+          <li class="list-group-item">My Bag</li>
+          <li class="list-group-item">
+            <ion-icon class="me-3" name="location-outline"></ion-icon>
+            United States
+          </li>
+        </ul>
+      </div>
+
+      <main>
+          <div class="section-banner">
+              <div class="banner-content">
+                <div class="text-content">
+                  <h1>¿Qué es un robot y por qué deberían los niños aprender a programar uno?</h1>
+                  <p>
+                    ¿Qué es lo primero que se te viene a la mente cuando piensas en la palabra "robot"? 
+                    ¿Una figura humanoide con inteligencia casi humana que puede ejecutar tareas similares a las nuestras? 
+                    ¿Una máquina que ensambla cosas en una cadena de producción? ¿Un róver espacial? 
+                    ¿Piensas que cómo vas a ayudar a los peques a programar un robot si tú nunca has programado uno? ¡Sigue leyendo y descúbrelo!
+                  </p>
+                </div>
+                <div class="image-content">
+                  <img src="Images/robotics1.jpg" alt="Robot LEGO">
+                </div>
+              </div>
+            </div>
+          
+        <!-- FOURTH  SECTION -->
+        <section class="pb-7">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 mb-3">
+                <h2 class="text-black fw-900">What others are buying</h2>
+              </div>
+
+              <div class="col-12">
+                <div class="swiper swiper-container" id="slider4">
+                  <div class="swiper-wrapper mb-5">
+                    <div class="swiper-slide" style="max-width: 300px;">
+                      <div class="card mb-4" style="border-radius: 0px;">
+                        <div class="card-header bg-white border-bottom-none pt-3">
+                          <button class="btn-hearth d-flex justify-content-center align-items-center" onclick="addToFavorites('Set SPIKE™ Prime de LEGO® Education', 'Images/robotics 2.jpg')">
+                              <ion-icon name="heart-outline" style="color: #1f7ebf !important;"></ion-icon>
+                            </button>
+                        </div>
+                        <div class="card-body h-300px card-img">
+                          <img src="Images/robotics 2.jpg" alt="" class="w-100">
+                        </div>
+                        <div class="card-header bg-white d-flex justify-content-start pb-3">
+                          <span class="badge text-bg-warning">Warning</span>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column justify-content-start">
+                        <a href="setrobotics1.html"><h6 class="fw-900 text-black text-start mb-3">Set SPIKE™ Prime de LEGO® Education</h6></a>
+                        <div class="d-flex justify-content-start mb-3">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                        </div>
+                        <span class="text-start text-black ff-cera-pro-bold mb-3">USD 26.05</span>
+                        <button class="btn-5 text-center">Add to bag</button>
+                      </div>
+                      
+                    </div>
+                    <div class="swiper-slide" style="max-width: 300px;">
+                      <div class="card mb-4" style="border-radius: 0px;">
+                        <div class="card-header bg-white border-bottom-none pt-3">
+                          <button class="btn-hearth d-flex justify-content-center align-items-center" onclick="addToFavorites('Set BricQ Motion Prime de LEGO® Education', 'Images/robotics3.jpg')">
+                              <ion-icon name="heart-outline" style="color: #1f7ebf !important;"></ion-icon>
+                            </button>
+                        </div>
+                        <div class="card-body h-300px card-img">
+                          <img src="Images/robotics3.jpg" alt="" class="w-100">
+                        </div>
+                        <div class="card-header bg-white d-flex justify-content-start pb-3">
+                          <span class="badge text-bg-warning">Warning</span>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column justify-content-start">
+                        <a href="setrobotics2.html"><h6 class="fw-900 text-black text-start mb-3">Set BricQ Motion Prime ® Education</h6></a>
+                        <div class="d-flex justify-content-start mb-3">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                        </div>
+                        <span class="text-start text-black ff-cera-pro-bold mb-3">USD 236.05</span>
+                        <button class="btn-5 text-center">Add to bag</button>
+                      </div>
+                      
+                    </div>
+                    <div class="swiper-slide" style="max-width: 300px;">
+                      <div class="card mb-4" style="border-radius: 0px;">
+                        <div class="card-header bg-white border-bottom-none pt-3">
+                          <button class="btn-hearth d-flex justify-content-center align-items-center" onclick="addToFavorites('Set de Expansión SPIKE™ Prime', 'Images/robotics4.jpg')">
+                              <ion-icon name="heart-outline" style="color: #1f7ebf !important;"></ion-icon>
+                            </button>
+                        </div>
+                        <div class="card-body h-300px card-img">
+                          <img src="Images/robotics4.jpg" class="w-100">
+                        </div>
+                        <div class="card-header bg-white d-flex justify-content-start pb-3">
+                          <span class="badge text-bg-warning">Warning</span>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column justify-content-start">
+                        <a href="setsrobotics3.html"><h6 class="fw-900 text-black text-start mb-3"> Set de Expansión SPIKE™ Prime</h6></a>
+                        <div class="d-flex justify-content-start mb-3">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                        </div>
+                        <span class="text-start text-black ff-cera-pro-bold mb-3">USD 160.05</span>
+                        <button class="btn-5 text-center">Add to bag</button>
+                      </div>
+                      
+                    </div>
+                    <div class="swiper-slide" style="max-width: 300px;">
+                      <div class="card mb-4" style="border-radius: 0px;">
+                        <div class="card-header bg-white border-bottom-none pt-3">
+                          <button class="btn-hearth d-flex justify-content-center align-items-center" onclick="addToFavorites('Set BricQ Motion Essential de LEGO® Education', 'Images/robotics5.webp')">
+                              <ion-icon name="heart-outline" style="color: #1f7ebf !important;"></ion-icon>
+                            </button>
+                        </div>
+                        <div class="card-body h-300px card-img">
+                          <img src="Images/robotics5.webp" alt="" class="w-100">
+                        </div>
+                        <div class="card-header bg-white d-flex justify-content-start pb-3">
+                          <span class="badge text-bg-warning">Warning</span>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column justify-content-start">
+                        <a href="setsrobotics4.html"><h6 class="fw-900 text-black text-start mb-3">Set BricQ Motion Essential Education</h6></a>
+                        <div class="d-flex justify-content-start mb-3">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                        </div>
+                        <span class="text-start text-black ff-cera-pro-bold mb-3">USD 230.05</span>
+                        <button class="btn-5 text-center">Add to bag</button>
+                      </div>
+                      
+                    </div>
+                    <div class="swiper-slide" style="max-width: 300px;">
+                      <div class="card mb-4" style="border-radius: 0px;">
+                        <div class="card-header bg-white border-bottom-none pt-3">
+                          <button class="btn-hearth d-flex justify-content-center align-items-center" onclick="addToFavorites('Set SPIKE™ Prime de LEGO® Education', 'Images/robotics6.webp')">
+                              <ion-icon name="heart-outline" style="color: #1f7ebf !important;"></ion-icon>
+                            </button>
+                        </div>
+                        <div class="card-body h-300px card-img">
+                          <img src="Images/robotics6.webp" alt="" class="w-100">
+                        </div>
+                        <div class="card-header bg-white d-flex justify-content-start pb-3">
+                          <span class="badge text-bg-warning">Warning</span>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column justify-content-start">
+                        <a href="setrobotics5.html"><h6 class="fw-900 text-black text-start mb-3">Set SPIKE™ Prime de LEGO® Education</h6></a>
+                        <div class="d-flex justify-content-start mb-3">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                          <img src="assets/home/star.svg" style="width: 15px;">
+                        </div>
+                        <span class="text-start text-black ff-cera-pro-bold mb-3">USD 136.05</span>
+                        <button class="btn-5 text-center">Add to bag</button>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="swiper-scrollbar-4" style="height: 5px !important;border-radius: 0px;"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <!-- FOURTH SECTION -->
+        <div class="section-banner" style="background-color: #0681c3;"> 
+          <div class="banner-content">
+            <div class="text-content">
+              <h1 style="color: white;">Aprende a programar en casa con un set LEGO®</h1>
+              <p style="color: black">
+                El set LEGO® Education SPIKE™ Essential despierta la imaginación de los niños y las niñas, fomenta la creatividad y contribuye al desarrollo de valiosas habilidades de programación
+              </p>
+            </div>
+            <div class="video-content">
+              <video width="500" height="300" controls>
+                <source src="aprende1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        
+              <!-- SIXTH SECTION -->
+      </main>
+
+      <footer class="py-5" style="background-color: #201d48 !important;">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-lg-3 col-md-12 d-flex flex-column mb-5">
+              <img class="mb-4" src="assets/brand-lego.svg" style="width: 80px;">
+              <button class="mb-4 btn-6">
+                <ion-icon name="location-outline"></ion-icon>
+                United States
+              </button>
+              <ul class="list-inline">
+                <li class="mb-3">
+                  <a href="" class="text-white td-none">Gift Cards</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="text-white td-none">Find inspiration</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="text-white td-none">LEGO Catalogs</a>
+                </li>
+                <li>
+                  <a href="" class="text-white td-none">Find a LEGO Store</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-9 col-md-12 d-none d-lg-block">
+              <div class="row">
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                    <h5 class="text-white ff-cera-pro-bold mb-5">About Us</h5>
+                    <ul class="list-inline">
+                      <li class="mb-3">
+                        <a href="" class="text-white td-none">About the LEGO Group</a>
+                      </li>
+                      <li class="mb-3">
+                        <a href="" class="text-white td-none">LEGO® News</a>
+                      </li>
+                      <li class="mb-3">
+                        <a href="" class="text-white td-none">Sustainability</a>
+                      </li>
+                      <li class="mb-3">
+                        <a href="" class="text-white td-none">Supply Chain Transparency Statement</a>
+                      </li>
+                      <li class="mb-3">
+                        <a href="" class="text-white td-none">LEGO Product Certification</a>
+                      </li>
+                      <li class="mb-3">
+                        <a href="" class="text-white td-none">LEGO Jobs</a>
+                      </li>
+                      <li class="mb-3">
+                        <a href="" class="text-white td-none">LEGO Compliance Line</a>
+                      </li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                  <h5 class="text-white ff-cera-pro-bold mb-5">About Us</h5>
+                  <ul class="list-inline">
+                    <li class="mb-3">
+                      <a href="" class="text-white td-none">About the LEGO Group</a>
+                    </li>
+                    <li class="mb-3">
+                      <a href="" class="text-white td-none">LEGO® News</a>
+                    </li>
+                    <li class="mb-3">
+                      <a href="" class="text-white td-none">Sustainability</a>
+                    </li>
+                    <li class="mb-3">
+                      <a href="" class="text-white td-none">Supply Chain Transparency Statement</a>
+                    </li>
+                    <li class="mb-3">
+                      <a href="" class="text-white td-none">LEGO Product Certification</a>
+                    </li>
+                    <li class="mb-3">
+                      <a href="" class="text-white td-none">LEGO Jobs</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                  <h5 class="text-white ff-cera-pro-bold mb-5">About Us</h5>
+                  <ul class="list-inline">
+                    <li class="mb-3">
+                      <a href="" class="text-white td-none">About the LEGO Group</a>
+                    </li>
+                    <li class="mb-3">
+                      <a href="" class="text-white td-none">LEGO® News</a>
+                    </li>
+                    <li class="mb-3">
+                      <a href="" class="text-white td-none">Sustainability</a>
+                    </li>
+                    
+                  </ul>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                  <h5 class="text-white ff-cera-pro-bold mb-5">About Us</h5>
+                  <ul class="list-inline">
+                    <li class="mb-3">
+                      <a href="" class="text-white td-none">About the LEGO Group</a>
+                    </li>
+                    <li class="mb-3">
+                      <a href="" class="text-white td-none">LEGO® News</a>
+                    </li>
+                    <li class="mb-3">
+                      <a href="" class="text-white td-none">Sustainability</a>
+                    </li>
+                    <li class="mb-3">
+                      <a href="" class="text-white td-none">Supply Chain Transparency Statement</a>
+                    </li>
+                    <li class="mb-3">
+                      <a href="" class="text-white td-none">LEGO Product Certification</a>
+                    </li>
+                    <li class="mb-3">
+                      <a href="" class="text-white td-none">LEGO Jobs</a>
+                    </li>
+                    <li class="mb-3">
+                      <a href="" class="text-white td-none">LEGO Compliance Line</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-12 d-xs-block d-sm-block d-md-block d-lg-none ">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed ff-cera-pro-bold" type="button" style="color: #ffb800 !important;" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      About Us
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <ul class="list-group">
+                      <li class="list-group-item" style="padding-left: 0px !important;">About the LEGO Group</li>
+                      <li class="list-group-item" style="padding-left: 0px !important;">LEGO® News</li>
+                      <li class="list-group-item" style="padding-left: 0px !important;">Sustainability</li>
+                      <li class="list-group-item" style="padding-left: 0px !important;">LEGO Product Certification</li>
+                      <li class="list-group-item" style="padding-left: 0px !important;">LEGO Jobs</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed ff-cera-pro-bold" type="button" style="color: #ffb800 !important;" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      About Us
+                    </button>
+                    
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <ul class="list-group">
+                      <li class="list-group-item" style="padding-left: 0px !important;">About the LEGO Group</li>
+                      <li class="list-group-item" style="padding-left: 0px !important;">LEGO® News</li>
+                      <li class="list-group-item" style="padding-left: 0px !important;">Sustainability</li>
+                      <li class="list-group-item" style="padding-left: 0px !important;">LEGO Product Certification</li>
+                      <li class="list-group-item" style="padding-left: 0px !important;">LEGO Jobs</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed ff-cera-pro-bold" style="color: #ffb800 !important;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      About Us
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <ul class="list-group">
+                      <li class="list-group-item" style="padding-left: 0px !important;">About the LEGO Group</li>
+                      <li class="list-group-item" style="padding-left: 0px !important;">LEGO® News</li>
+                      <li class="list-group-item" style="padding-left: 0px !important;">Sustainability</li>
+                      <li class="list-group-item" style="padding-left: 0px !important;">LEGO Product Certification</li>
+                      <li class="list-group-item" style="padding-left: 0px !important;">LEGO Jobs</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between mb-5">
+            <div class="">
+              <label class="text-white ff-cera-pro-bold mb-3" >
+                SUBSCRIBE TO LEGO® SHOP EMAILS
+              </label>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Recipient's username" 
+                style="border-top-left-radius: 0px;border-bottom-left-radius: 0px;padding: 12px !important;">
+                <span class="input-group-text px-3" id="basic-addon2" style="background-color: #e96f14 !important;border-color: #e96f14 ;">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </span>
+              </div>
+            </div>
+            <div class="">
+              <label class="text-white ff-cera-pro-bold mb-3" >
+                FOLLOW US
+              </label>
+
+              <div class="d-flex">
+                <button class="btn-social">
+                  <ion-icon class="text-white" style="font-size: 20px;" name="logo-facebook"></ion-icon>
+                </button>
+                <button class="btn-social">
+                  <ion-icon class="text-white" style="font-size: 20px;" name="logo-instagram"></ion-icon>
+                </button>
+                <button class="btn-social">
+                  <ion-icon class="text-white" style="font-size: 20px;" name="logo-youtube"></ion-icon>
+                </button>
+                <button class="btn-social">
+                  <ion-icon class="text-white" style="font-size: 20px;" name="logo-twitch"></ion-icon>
+                </button>
+              </div>
+              
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <ul class="list-inline d-flex gap-4">
+                <li>
+                  <a href="" class="text-white">
+                    <small>Privacy Policy</small>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="text-white">
+                    <small>Cookies</small>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="text-white">
+                    <small>Legal Notice</small>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="text-white">
+                    <small>Terms of Use</small>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="text-white">
+                    <small>Digital Wellbeing</small>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="text-white">
+                    <small>Accessibility</small>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="text-white">
+                    <small>Cookie Settings</small>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="text-white">
+                    <small>Privacy Settings for residents of CA, VA, CT, UT and CO</small>
+                  </a>
+                </li>
+                
+              </ul>
+
+              <small class="text-white">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem nihil provident minus iusto eveniet ipsam dolor amet dolorum cum corporis repellendus ducimus aliquam porro, adipisci vero dolores officiis. Veritatis, officiis!
+              </small>
+            </div>
+            <div class="col-lg-12">
+              
+            </div>
+          </div>
+        </div>
+      </footer>
+        
+      </main>
+
+      <div id="box-shadow"></div>
+
+      <div id="favoriteSidebar" class="sidebar">
+          <div class="sidebar-header">
+            <h4>Favorite LEGO Sets</h4>
+            <button class="close-btn" onclick="closeSidebar()">&times;</button>
+          </div>
+          <div class="sidebar-content">
+            <ul id="favoriteItems">
+            </ul>
+          </div>
+      </div>
+
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="robotics.js"></script>
+  </body>
+</html>
