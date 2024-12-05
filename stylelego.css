@@ -758,4 +758,224 @@ a {
     border-radius: 10px;
     border: 1px solid #ccc;
   }
-  
+/* General Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Cambiar el tamaño de la fuente en todo el sitio */
+    body {
+        font-size: 0.9rem;
+    }
+
+    /* Ajustar el tamaño de los botones */
+    .btn-1, .btn-2, .btn-3, .btn-4, .btn-5, .btn-6 {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+
+    /* Ajuste de la barra lateral */
+    .sidebar {
+        width: 100%;
+        right: 0;
+        box-shadow: none;
+    }
+
+    /* Títulos y textos más pequeños */
+    .sidebar-header h4 {
+        font-size: 1.2rem;
+    }
+
+    .sidebar-content .category h5 {
+        font-size: 1rem;
+    }
+
+    .swiper-slide {
+        font-size: 16px;
+    }
+
+    .navbar-brand img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Ajustar el tamaño del texto en algunos elementos */
+    .btn-sign-in {
+        font-size: 0.8rem;
+        padding: 3px 15px;
+    }
+
+    .btn-sign-in .icon {
+        width: 14px;
+    }
+
+    /* Ajustar el slider */
+    .swiper-scrollbar-5 .swiper-scrollbar-drag {
+        background-color: #ddd;
+    }
+
+    /* Ajuste de imágenes en las tarjetas */
+    .card-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ajustes en las fotos compartidas */
+    .shared-photo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Cambiar el tamaño del texto en las fotos compartidas */
+    .shared-photo p {
+        font-size: 13px;
+    }
+
+    /* Ajustar formulario de carga */
+    .custum-file-upload {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .custum-file-upload .text {
+        font-size: 0.8rem;
+    }
+
+    /* Contenedor de las fotos */
+    #sharedPhotos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Tablet Responsiveness */
+@media (max-width: 992px) {
+    /* Ajustar el navbar */
+    nav.navbar {
+        background-color: #f7f7f7;
+    }
+
+    .navbar-brand img {
+        width: 45px;
+        height: 45px;
+    }
+
+    /* Hacer que los botones sean más pequeños en tablets */
+    .btn-1, .btn-2, .btn-3, .btn-4, .btn-5, .btn-6 {
+        font-size: 0.9rem;
+        padding: 6px 15px;
+    }
+
+    /* Ajustar la caja lateral */
+    .sidebar {
+        width: 350px;
+    }
+
+    .sidebar.open {
+        right: 0;
+    }
+
+    .swiper-slide {
+        font-size: 18px;
+    }
+
+    .btn-sign-in {
+        font-size: 0.9rem;
+        padding: 3px 20px;
+    }
+
+    /* Ajuste de la foto compartida */
+    .shared-photo {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Ajustes del slider */
+    .swiper-scrollbar-5 .swiper-scrollbar-drag {
+        background-color: #9a9a9a;
+    }
+
+    /* Foto de la tarjeta */
+    .card-img img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Mobile Small Responsiveness */
+@media (max-width: 480px) {
+    /* Ajuste en los botones */
+    .btn-1, .btn-2, .btn-3, .btn-4, .btn-5, .btn-6 {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+
+    /* Cambiar tamaño de los iconos */
+    .btn-social {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Ajuste de los formularios */
+    #userComment {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    /* Ajuste de las fotos en el contenedor compartido */
+    #sharedPhotos .photo-item {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Ajustar la vista del slider */
+    .swiper-slide {
+        font-size: 14px;
+    }
+    
+    /* Ajuste de la barra lateral */
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .sidebar-header h4 {
+        font-size: 1.1rem;
+    }
+
+    .sidebar-content .category h5 {
+        font-size: 0.9rem;
+    }
+
+    .sidebar-content .item {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+/* Establecer la barra lateral oculta en móviles por defecto */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;  /* Ajusta el tamaño de la sidebar según sea necesario */
+        height: 100%;
+        background-color: #fff;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    /* Asegurar que el contenido principal sea visible */
+    .content {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    /* Establecer el contorno de la página cuando se abre la sidebar */
+    .content.overlay {
+        opacity: 0.5;
+    }
+}
